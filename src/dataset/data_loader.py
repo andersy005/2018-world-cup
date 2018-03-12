@@ -1,3 +1,7 @@
+# Script to load, process/augment data from GTA5 and CityScape datasets.abs
+# License: MIT
+# Author: Anderson Banihirwe
+
 import torch
 from torchvision import datasets
 from torchvision import transforms
