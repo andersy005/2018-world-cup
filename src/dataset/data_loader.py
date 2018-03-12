@@ -16,9 +16,28 @@ class Config:
     """Configuration class that
     contains needed configuration settings."""
     def __init__(self, gta='/home/abanihirwe/datasets/gta/images/',
-                 city='/home/abanihirwe/datasets/city_real/'):
+                 city='/home/abanihirwe/datasets/city_real/',
+                 image_size=32, g_conv_dim=64, d_conv_dim=64,
+                 use_reconst_loss=True, use_labels=None, num_classes=None,
+                 train_iters=4000, batch_size=64, num_workers=2, lr=0.0002,
+                 beta1=0.5, beta2=0.999, mode='train', model_path='models',
+                 sample_path=None, log_step=10, sample_step=100):
         self.gta_path = gta
         self.city_path = city
+        self.image_size = image_size
+        self.g_conv_dim = g_conv_dim
+        self.d_conv_dim = d_conv_dim
+        self.use_reconst_loss = use_reconst_loss
+        self.train_iters = train_iters
+        self.batch_size = batch_size
+        self.num_workers = num_workers
+        self.beta1 = beta1
+        self.beta2 = beta2
+        self.mode = mode
+        self.model_path = model_path
+        self.sample_path = sample_path
+        self.log_step = log_step
+        self.sample_step = sample_step
 
 
 class CustomDataset(Dataset):
